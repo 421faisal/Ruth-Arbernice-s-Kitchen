@@ -1,0 +1,8 @@
+# never upload private originals, local data or secrets to Vercel
+photo-library
+uploads
+prisma/*.db
+prisma/*.db-journal
+.env
+.env.local
+brand-kit

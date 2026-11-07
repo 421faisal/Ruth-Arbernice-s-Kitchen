@@ -76,10 +76,11 @@ export default async function MenuPage() {
                         <DishImage dish={i} compact className="transition duration-[1.2s] group-hover:scale-110" />
                       </div>
                       <div className="flex min-w-0 flex-1 flex-col gap-2 pr-2">
-                        <div className="flex items-baseline gap-3">
+                        {/* On phones the price wraps under the name; from sm up it sits at the end of a dotted leader */}
+                        <div className="flex flex-wrap items-baseline gap-x-3 gap-y-0.5">
                           <h3 className="font-serif text-xl font-bold text-cream transition-colors duration-500 group-hover:text-gold-light">{i.name}</h3>
-                          <span className="mb-1.5 flex-1 border-b border-dotted border-gold/25" aria-hidden />
-                          <span className="shrink-0 font-serif text-lg font-semibold text-gold">{formatPrice(i.priceCents)}</span>
+                          <span className="mb-1.5 hidden flex-1 border-b border-dotted border-gold/25 sm:block" aria-hidden />
+                          <span className="w-full whitespace-nowrap font-serif text-lg font-semibold text-gold sm:w-auto">{formatPrice(i.priceCents)}</span>
                         </div>
                         {i.description && <p className="leading-relaxed text-muted">{i.description}</p>}
                       </div>

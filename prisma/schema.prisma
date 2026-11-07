@@ -1,12 +1,13 @@
-// Local development uses SQLite (a single file, no setup).
-// For hosting, switch provider to "postgresql" and point DATABASE_URL at a Postgres database (see README).
+// Postgres (Neon, connected through Vercel). DATABASE_URL is the pooled connection used by the site;
+// DATABASE_URL_UNPOOLED is the direct connection Prisma uses for schema changes (db push).
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DATABASE_URL_UNPOOLED")
 }
 
 model MenuItem {

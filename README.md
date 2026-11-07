@@ -58,37 +58,38 @@ with real photos of the kitchen's food from the dashboard as soon as possible.
 
 ## Run it locally
 
+The database is Postgres (Neon). Pull the connection settings from Vercel, then run:
+
 ```bash
 npm install
-npm run setup     # creates the SQLite database with the starter menu, photos, hours, story and welcome post
-npm run dev       # http://localhost:3000   (owner login at /admin)
+npx vercel link                 # once: link to the "ruth-arbernise-kitchen" Vercel project
+npx vercel env pull .env.local  # DATABASE_URL, DATABASE_URL_UNPOOLED, BLOB_READ_WRITE_TOKEN
+npm run dev                     # http://localhost:3000   (owner login at /admin)
 ```
 
-`.env` (copy `.env.example`):
+Put `ADMIN_PASSWORD`, `SESSION_SECRET` and `SITE_URL` for local use in `.env` (copy `.env.example`). Prisma CLI
+commands read `.env` only, so load `.env.local` first: `set -a; . ./.env.local; set +a; npx prisma db push`.
 
 | Variable | Purpose |
 | --- | --- |
-| `DATABASE_URL` | `file:./dev.db` locally (SQLite) |
-| `ADMIN_PASSWORD` | Owner's dashboard password. **Change before going live.** |
-| `SESSION_SECRET` | Long random string that signs the login cookie. **Change before going live.** |
-| `SITE_URL` | Public address, e.g. `https://ruthnarbernise.com`. Used for canonical URLs, sitemap and structured data |
-| `BLOB_READ_WRITE_TOKEN` | Optional. When set, uploaded photos go to Vercel Blob instead of `uploads/` |
+| `DATABASE_URL` | Neon pooled connection (used by the site) |
+| `DATABASE_URL_UNPOOLED` | Neon direct connection (used by `prisma db push`) |
+| `ADMIN_PASSWORD` | Owner's dashboard password |
+| `SESSION_SECRET` | Long random string that signs the login cookie |
+| `SITE_URL` | Public address. Used for canonical URLs, sitemap and structured data |
+| `BLOB_READ_WRITE_TOKEN` | Vercel Blob store for photos the owner uploads |
 
-## Going live
+## Hosting (live on Vercel)
 
-### Option A: Vercel + Neon Postgres + Vercel Blob (free tiers)
-
-1. Create a free Postgres database at [neon.tech](https://neon.tech).
-2. In `prisma/schema.prisma`, change `provider = "sqlite"` to `provider = "postgresql"`.
-3. Import the project into Vercel and add a **Blob** store (sets `BLOB_READ_WRITE_TOKEN`).
-4. Set `DATABASE_URL`, `ADMIN_PASSWORD`, `SESSION_SECRET` and `SITE_URL`.
-5. Build command: `prisma db push && prisma db seed && next build`. The seed only adds what's missing.
-6. Submit `https://your-domain/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
-
-### Option B: one small server (Railway, Render, a VPS) with a persistent disk
-
-Keep SQLite: point `DATABASE_URL` at a file on the volume (e.g. `file:/data/kitchen.db`) and keep `uploads/` on the
-volume too. Run `npm run setup` once, then `npm run build && npm start`.
+- **Site:** Vercel project `ruth-arbernise-kitchen`. Every push to `main` on GitHub deploys automatically.
+- **Database:** Neon Postgres `ruth-kitchen-db` (free plan, `iad1` / US East), connected through the Vercel Marketplace.
+- **Photos:** Vercel Blob store `ruth-kitchen-photos` (public).
+- **Secrets** (`ADMIN_PASSWORD`, `SESSION_SECRET`) are encrypted Vercel environment variables. Change the owner
+  password in Vercel → Settings → Environment Variables, then redeploy.
+- **Schema changes:** run `prisma db push` against Neon (see above) before pushing code that needs them.
+- **After launch:** submit `/sitemap.xml` in Google Search Console and Bing Webmaster Tools, and set up a Google
+  Business Profile with the same name, address and phone as the website.
+- **Custom domain:** add it in Vercel → Settings → Domains, then update `SITE_URL`.
 
 ## Project layout
 

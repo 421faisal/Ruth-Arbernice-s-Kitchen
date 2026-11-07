@@ -52,3 +52,6 @@ photo-library/*.jpg
 
 # family photo originals: private, full size, unblurred (web versions live in public/images/family)
 photo-library/family/
+
+.vercel
+.env*
