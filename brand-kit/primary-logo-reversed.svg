@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <title>Ruth ’N’ Arbernise’s Kitchen</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&amp;family=Yellowtail&amp;display=swap');
+      .serif  { font-family: 'Fraunces', Georgia, serif; font-weight: 800; }
+      .script { font-family: 'Yellowtail', 'Brush Script MT', cursive; }
+    </style>
+    <linearGradient id="gg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F7E7A6"/><stop offset="0.45" stop-color="#D9B44A"/><stop offset="1" stop-color="#9C7A22"/>
+    </linearGradient>
+    <linearGradient id="gc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF6D8"/><stop offset="1" stop-color="#E8CF86"/>
+    </linearGradient>
+    <path id="heart" d="M 0,0.9 C -1.25,0 -1.05,-0.95 -0.5,-0.95 C -0.2,-0.95 0,-0.72 0,-0.5 C 0,-0.72 0.2,-0.95 0.5,-0.95 C 1.05,-0.95 1.25,0 0,0.9 Z"/>
+  </defs>
+  <rect width="1000" height="1000" fill="#3A2416"/>
+  <text class="serif" x="500" y="100" font-size="22.0" letter-spacing="7.0" dx="3.5" text-anchor="middle" fill="#B9C9A3">FAMILY OWNED &amp; OPERATED</text>
+  <text class="script" x="500" y="212.0" font-size="104.0" text-anchor="middle" fill="#F7EDDC">Ruth ’N’ Arbernise’s</text>
+  <text class="serif" x="500" y="290.0" font-size="64.0" letter-spacing="26.0" dx="13.0" text-anchor="middle" fill="#F7EDDC">KITCHEN</text>
+  <path d="M 182.0,268.0 L 228.0,268.0 M 772.0,268.0 L 818.0,268.0" stroke="#E9A15B" stroke-width="3.5" stroke-linecap="round"/>
+  <g transform="translate(500,560) scale(1.08) translate(-500,-572)">
+  <path d="M 236,736 L 236,606 A 264 264 0 0 1 764,606 L 764,736 Z" fill="#4A3122"/>
+  <path d="M 320.4,549.4 Q 328.4,596.8 341.6,596.8" fill="none" stroke="#DDA437" stroke-width="11.2" stroke-linecap="round"/>
+  <path d="M 362.9,556.8 Q 354.9,596.8 341.6,596.8" fill="none" stroke="#3F6B6E" stroke-width="10.8" stroke-linecap="round"/>
+  <circle cx="341.6" cy="596.8" r="8.2" fill="#DDA437"/>
+  <path d="M 417.1,556.8 Q 425.1,596.8 441.9,596.8" fill="none" stroke="#3F6B6E" stroke-width="10.8" stroke-linecap="round"/>
+  <path d="M 466.8,538.4 Q 458.8,596.8 441.9,596.8" fill="none" stroke="#F7EDDC" stroke-width="12.0" stroke-linecap="round"/>
+  <circle cx="441.9" cy="596.8" r="8.5" fill="#3F6B6E"/>
+  <path d="M 527.2,538.4 Q 535.2,604.1 551.7,604.1" fill="none" stroke="#F7EDDC" stroke-width="12.0" stroke-linecap="round"/>
+  <path d="M 576.2,564.1 Q 568.2,604.1 551.7,604.1" fill="none" stroke="#5E7A4E" stroke-width="10.2" stroke-linecap="round"/>
+  <circle cx="551.7" cy="604.1" r="8.3" fill="#F7EDDC"/>
+  <path d="M 627.8,564.1 Q 635.8,644.6 647.0,644.6" fill="none" stroke="#5E7A4E" stroke-width="10.2" stroke-linecap="round"/>
+  <path d="M 666.1,604.6 Q 658.1,644.6 647.0,644.6" fill="none" stroke="#C97B6B" stroke-width="7.5" stroke-linecap="round"/>
+  <circle cx="647.0" cy="644.6" r="6.7" fill="#5E7A4E"/>
+  <path d="M 703.9,604.6 Q 711.9,681.4 717.6,681.4" fill="none" stroke="#C97B6B" stroke-width="7.5" stroke-linecap="round"/>
+  <path d="M 731.4,641.4 Q 723.4,681.4 717.6,681.4" fill="none" stroke="#C0502E" stroke-width="7.0" stroke-linecap="round"/>
+  <circle cx="717.6" cy="681.4" r="5.4" fill="#C97B6B"/>
+  <path d="M 278.5,625.0 L 278.5,702.7 M 305.5,625.0 L 305.5,702.7" stroke="#DDA437" stroke-width="14.6" stroke-linecap="round"/>
+  <path d="M 281.9,537.2 Q 258.2,537.2 258.2,560.9 L 258.2,629.0 L 325.8,629.0 L 325.8,560.9 Q 325.8,537.2 302.1,537.2 Z" fill="#DDA437"/>
+  <circle cx="292" cy="508.6" r="23.6" fill="#DDA437"/>
+  <path d="M 377.1,628.6 L 377.1,703.0 M 402.9,628.6 L 402.9,703.0" stroke="#3F6B6E" stroke-width="14.0" stroke-linecap="round"/>
+  <path d="M 380.3,545.1 Q 357.8,545.1 357.8,567.7 L 357.8,632.6 L 422.2,632.6 L 422.2,567.7 Q 422.2,545.1 399.7,545.1 Z" fill="#3F6B6E"/>
+  <circle cx="390" cy="517.6" r="22.6" fill="#3F6B6E"/>
+  <path d="M 482.6,619.6 L 482.6,702.2 M 511.4,619.6 L 511.4,702.2" stroke="#F7EDDC" stroke-width="15.6" stroke-linecap="round"/>
+  <path d="M 474.0,525.4 Q 461.0,525.4 459.6,554.2 L 445.2,635.6 L 548.8,635.6 L 534.4,554.2 Q 533.0,525.4 520.0,525.4 Z" fill="#F7EDDC"/>
+  <path d="M 481.2,541.4 L 512.8,541.4 L 518.6,635.6 L 475.4,635.6 Z" fill="#3A2416"/>
+  <circle cx="497" cy="461.2" r="12.6" fill="#F7EDDC"/>
+  <circle cx="497" cy="495.2" r="25.2" fill="#F7EDDC"/>
+  <path d="M 589.7,632.2 L 589.7,703.3 M 614.3,632.2 L 614.3,703.3" stroke="#5E7A4E" stroke-width="13.3" stroke-linecap="round"/>
+  <path d="M 592.8,553.0 Q 571.2,553.0 571.2,574.6 L 571.2,636.2 L 632.8,636.2 L 632.8,574.6 Q 632.8,553.0 611.2,553.0 Z" fill="#5E7A4E"/>
+  <circle cx="602" cy="526.5" r="21.5" fill="#5E7A4E"/>
+  <path d="M 676.0,652.0 L 676.0,705.1 M 694.0,652.0 L 694.0,705.1" stroke="#C97B6B" stroke-width="9.8" stroke-linecap="round"/>
+  <path d="M 678.2,596.5 Q 662.5,596.5 662.5,612.2 L 662.5,656.0 L 707.5,656.0 L 707.5,612.2 Q 707.5,596.5 691.8,596.5 Z" fill="#C97B6B"/>
+  <circle cx="685" cy="575.8" r="15.8" fill="#C97B6B"/>
+  <path d="M 738.0,670.0 L 738.0,706.0 M 750.0,670.0 L 750.0,706.0" stroke="#C0502E" stroke-width="8.0" stroke-linecap="round"/>
+  <path d="M 739.5,636.0 Q 729.0,636.0 729.0,646.5 L 729.0,674.0 L 759.0,674.0 L 759.0,646.5 Q 759.0,636.0 748.5,636.0 Z" fill="#C0502E"/>
+  <circle cx="744" cy="620.5" r="10.5" fill="#C0502E"/>
+  <use href="#heart" transform="translate(482.0,408.6) scale(22)" fill="#C0502E" stroke="#3A2416" stroke-width="0.136"/>
+  <use href="#heart" transform="translate(512.0,402.6) scale(22)" fill="#DDA437" stroke="#3A2416" stroke-width="0.136"/>
+  <g fill="none" stroke="#F7EDDC" stroke-linecap="round">
+    <path d="M 292,726 L 292,790" stroke-width="5"/><path d="M 292,732 Q 288,761 265,780 M 292,732 Q 296,761 319,780" stroke-width="3.5"/>
+    <path d="M 390,726 L 390,788" stroke-width="5"/><path d="M 390,732 Q 386,760 364,779 M 390,732 Q 394,760 416,779" stroke-width="3.5"/>
+    <path d="M 497,726 L 497,792" stroke-width="5"/><path d="M 497,732 Q 493,762 469,782 M 497,732 Q 501,762 525,782" stroke-width="3.5"/>
+    <path d="M 602,726 L 602,787" stroke-width="5"/><path d="M 602,732 Q 598,759 576,778 M 602,732 Q 606,759 628,778" stroke-width="3.5"/>
+    <path d="M 685,726 L 685,778" stroke-width="5"/><path d="M 685,732 Q 681,755 663,771 M 685,732 Q 689,755 707,771" stroke-width="3.5"/>
+    <path d="M 744,726 L 744,771" stroke-width="5"/><path d="M 744,732 Q 740,751 725,764 M 744,732 Q 748,751 763,764" stroke-width="3.5"/>
+  </g>
+  <rect x="228" y="711" width="568" height="15" rx="7.5" fill="#C99260"/>
+  <path d="M 240,711 Q 222,711 214,705 L 214,732 Q 222,726 240,726 Z" fill="#C99260"/>
+  <ellipse cx="164" cy="718.5" rx="58" ry="26" fill="#C99260"/>
+  <ellipse cx="160" cy="714" rx="38" ry="13" fill="#E2B588" opacity="0.55"/>
+  <circle cx="780" cy="718.5" r="3.2" fill="#E2B588"/>
+  </g>
+  <path d="M 154.0,867.0 L 206.0,867.0 M 794.0,867.0 L 846.0,867.0" stroke="#E9A15B" stroke-width="3.5" stroke-linecap="round"/>
+  <text class="serif" x="500" y="878" font-size="34.0" letter-spacing="9.0" dx="4.5" text-anchor="middle" fill="#E9A15B">ROOTED IN ILLINOIS</text>
+</svg>

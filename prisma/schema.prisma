@@ -1,0 +1,75 @@
+// Local development uses SQLite (a single file, no setup).
+// For hosting, switch provider to "postgresql" and point DATABASE_URL at a Postgres database (see README).
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model MenuItem {
+  id          String   @id @default(cuid())
+  name        String
+  description String   @default("")
+  /// Price in cents. Null = "Call for price", 0 = "Included".
+  priceCents  Int?
+  category    String   @default("Entrées")
+  imageUrl    String?
+  available   Boolean  @default(true)
+  featured    Boolean  @default(false)
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Post {
+  id          String    @id @default(cuid())
+  title       String
+  slug        String    @unique
+  excerpt     String    @default("")
+  content     String    @default("")
+  coverUrl    String?
+  published   Boolean   @default(false)
+  publishedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+/// Single row (id = "site") holding editable business details.
+model Settings {
+  id               String  @id @default("site")
+  phone            String  @default("")
+
+  // Pickup location (shown on the site and used for Google / AI search listings)
+  address          String  @default("")
+  city             String  @default("")
+  state            String  @default("NC")
+  zip              String  @default("")
+
+  announcement     String  @default("")
+  /// JSON array of 7 entries, index 0 = Sunday: { "closed": bool, "open": "11:00", "close": "22:00" }
+  hoursJson        String  @default("[]")
+  deliveryEnabled  Boolean @default(false)
+  orderNote        String  @default("")
+
+  // Delivery partners: "Order on DoorDash / Uber Eats" buttons appear once a link is filled in
+  doordashUrl      String  @default("")
+  ubereatsUrl      String  @default("")
+
+  // Social profiles (a button only appears when its link is filled in)
+  facebookUrl      String  @default("")
+  instagramUrl     String  @default("")
+  tiktokUrl        String  @default("")
+  linkedinUrl      String  @default("")
+  /// Number for the WhatsApp chat button, digits with country code, e.g. 12246459128
+  whatsappNumber   String  @default("")
+
+  // "Meet the Owner" story, edited at /admin/story
+  ownerName        String  @default("")
+  ownerTitle       String  @default("Owner, Cook & Single Mom of Five")
+  ownerPhotoUrl    String?
+  ownerQuote       String  @default("")
+  ownerStory       String  @default("")
+}
