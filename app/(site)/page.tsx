@@ -10,6 +10,8 @@ import { Eyebrow, Ornament, PhotoBackdrop, SectionTitle } from "@/components/sit
 import { GoldDust, Reveal } from "@/components/site/Motion";
 import { Faq } from "@/components/site/Faq";
 import { Gallery } from "@/components/site/Gallery";
+import { FamilySlideshow } from "@/components/site/Family";
+import { SLIDESHOW } from "@/lib/family";
 import { JsonLd } from "@/components/site/JsonLd";
 import { OrderButtons } from "@/components/site/OrderButtons";
 import { fulfillmentLabel, offersDelivery } from "@/lib/ordering";
@@ -169,7 +171,7 @@ export default async function HomePage() {
                 {s.owner.photoUrl ? (
                   <img src={s.owner.photoUrl} alt={s.owner.name ? `${s.owner.name}, owner of Ruth ’N’ Arbernise’s Kitchen` : "The owner of Ruth ’N’ Arbernise’s Kitchen"} className="h-full w-full object-cover" loading="lazy" />
                 ) : (
-                  <img src="/brand/emblem-gold.png" alt="" className="float w-4/5" />
+                  <FamilySlideshow photos={SLIDESHOW} />
                 )}
               </div>
             </div>

@@ -9,6 +9,8 @@ import { Reveal } from "@/components/site/Motion";
 import { SocialButtons } from "@/components/site/Social";
 import { JsonLd } from "@/components/site/JsonLd";
 import { OrderButtons } from "@/components/site/OrderButtons";
+import { FamilySlideshow, FamilyWall } from "@/components/site/Family";
+import { FAMILY_PHOTOS, SLIDESHOW } from "@/lib/family";
 
 export const metadata: Metadata = {
   title: "Our Story · Meet the Owner",
@@ -68,9 +70,7 @@ export default async function StoryPage() {
                   {o.photoUrl ? (
                     <img src={o.photoUrl} alt={o.name ? `${o.name}, ${o.title}` : "The owner of Ruth ’N’ Arbernise’s Kitchen"} className="h-full w-full object-cover" />
                   ) : (
-                    <div className="flex h-full items-center justify-center">
-                      <img src="/brand/emblem-gold.png" alt="" className="float w-4/5" />
-                    </div>
+                    <FamilySlideshow photos={SLIDESHOW} />
                   )}
                 </div>
               </div>
@@ -125,6 +125,19 @@ export default async function StoryPage() {
               </Link>
               <OrderButtons s={s} />
             </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================ MY WHY: FAMILY WALL */}
+      <section className="relative overflow-hidden border-t border-line bg-[#0b0a07] py-28">
+        <div className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-gold/10 blur-[130px]" aria-hidden />
+        <div className="relative mx-auto max-w-6xl px-5">
+          <SectionTitle center eyebrow="My why" title={<>The reason behind <span className="gold-text italic">every plate</span></>}>
+            Five children, two jobs and one dream. Every meal I cook is for them, and for the grandmothers who taught me.
+          </SectionTitle>
+          <div className="mt-16">
+            <FamilyWall photos={FAMILY_PHOTOS} />
           </div>
         </div>
       </section>

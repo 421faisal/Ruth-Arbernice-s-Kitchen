@@ -157,6 +157,27 @@ body {
   to { transform: scale(1.16) translate(-1.5%, -1%); }
 }
 
+/* Family slideshow: slow push-in on the active photo */
+.slide-zoom { animation: slide-zoom 7s ease-out both; }
+@keyframes slide-zoom {
+  from { transform: scale(1.02); }
+  to { transform: scale(1.12); }
+}
+
+/* Polaroid family wall: settle at a tilt, straighten and lift on hover */
+.polaroid {
+  transform: rotate(var(--tilt, 0deg));
+  transition: transform 0.9s cubic-bezier(.2,.7,.2,1), opacity 0.9s ease;
+  transition-delay: var(--d, 0s);
+}
+.js .polaroid { opacity: 0; transform: translateY(48px) rotate(calc(var(--tilt, 0deg) * 3)); }
+.js .polaroid.is-visible { opacity: 1; transform: rotate(var(--tilt, 0deg)); }
+.polaroid:hover, .js .polaroid.is-visible:hover {
+  transform: rotate(0deg) translateY(-10px) scale(1.04);
+  transition-delay: 0s;
+  z-index: 5;
+}
+
 .float { animation: float 8s ease-in-out infinite; }
 @keyframes float {
   0%, 100% { transform: translateY(0); }
@@ -201,6 +222,7 @@ body {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .js [data-reveal] { opacity: 1; transform: none; }
+  .js .polaroid { opacity: 1; transform: rotate(var(--tilt, 0deg)); }
 }
 
 /* ------------------------------------------------------------------ blog article */

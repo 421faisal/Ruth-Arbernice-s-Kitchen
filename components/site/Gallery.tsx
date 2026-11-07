@@ -1,4 +1,5 @@
 import { Reveal } from "./Motion";
+import { OWNER_FOOD_PHOTO } from "@/lib/family";
 
 // Mosaic of kitchen photos for the home page. Spans make a magazine-style layout on large screens.
 const PHOTOS = [
@@ -8,7 +9,7 @@ const PHOTOS = [
   { src: "/images/greens-cooking-over-open-fire.webp", alt: "A pot of greens cooking over an open fire", caption: "Slow-cooked greens", span: "lg:row-span-2" },
   { src: "/images/cornbread-slices.webp", alt: "Slices of golden cornbread on a plate", caption: "Cornbread with every meal", span: "" },
   { src: "/images/whole-roast-chicken-with-green-beans.webp", alt: "Whole roast chicken served with green beans", caption: "Sunday dinner", span: "lg:col-span-2" },
-  { src: "/images/mac-and-cheese-and-fried-chicken-trays.webp", alt: "Trays of macaroni and fried chicken", caption: "Made for the whole family", span: "" },
+  { src: OWNER_FOOD_PHOTO.src, alt: OWNER_FOOD_PHOTO.alt, caption: OWNER_FOOD_PHOTO.caption, span: "" },
 ];
 
 export function Gallery() {

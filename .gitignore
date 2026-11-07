@@ -49,3 +49,6 @@ uploads/*
 
 # full-size original photos (web versions live in public/images)
 photo-library/*.jpg
+
+# family photo originals: private, full size, unblurred (web versions live in public/images/family)
+photo-library/family/
